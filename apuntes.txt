@@ -1,0 +1,139 @@
+//HTML
+
+
+alt="" sirve para dar una descripcion cuando no carga el contenido multimedia
+
+<figure><figcaption>
+    Se pone un texto que va debajo de la imagen
+</figcaption></figure>
+
+<section> se usa como contenedor que se usa cuando el contenido tiene relacion entre si
+
+<article> contenido que se puede compartir o consumir sin importar el demas contenido de la pagina
+
+<aside> tiene contenido que esta relacionado con su alrededor, un aside dentro de una contenedor tiene
+que estar relacionado con ese contenedor, no con lo exterior al contenedor
+
+<nav> un contenedor con enlaces
+
+<main> descendiente directo de body, no debe haber mas de un main, ni debe estar dentro de un article,
+aside, nav,header o footer
+
+<div> agrupar contenido, pero no puede tener una relacion semantica
+
+elemento*NumeroElementos{contenido elemento $} $= contador
+
+descripcion de buscador = <meta name="description" content="descripcion que aparece en buscador">
+
+descripcion en FACEBOOK o otras redes sociales
+    imagen = <meta property="og:image" content="url imagen">
+    descripcion = <meta property="og:description" content="descripcion">
+    titulo = <meta property="og:tittle" content="titulo">
+
+descripcion en TWITTER
+    imagen = <meta property="TWITTER:image" content="url imagen">
+    descripcion = <meta property="TWITTER:description" content="descripcion">
+    titulo = <meta property="TWITTER:tittle" content="titulo">
+
+palabras clave = <meta name="keywords" content="palabra clave1, palabra clave2">
+
+para que un script que esta en el head cargue despues de que la pagina cargue = <script defer src="src.js" ></script>
+
+
+//CSS
+
+
+elemento.'clase' = elemento con clase 'clase'   div.cont = div con clase 'cont'
+elemento#'id' = elemento con clase 'id'    div#destacado = div con id 'destacado'
+
+pseudoclases se utilizan añadiendo ':' elemento:pseudoclase
+pseudoclase usan (posicion, estado, relacion)
+
+pseudoelementos se utilizan añadiento '::' elemento::pseudoelemento
+pseudoelemento usan el contenido del elemento
+
+::before y ::after añaden algo antes o despues del contenido original
+div::before{content:'puta'}
+
+para usar un valor de porcentaje, el elemento ancestro debe tener un valor de ese tipo
+
+las propiedades que son graficas, son heredables generalmente, las propiedades de poscion y
+comportamiento no lo son
+
+las unidades em se heredan, haciendo un efecto de cascada
+
+las unidades rem no se herenda, son unidades relativas que se basan en el elemento HTML
+
+media querys @media screen and(condicion){}
+
+la cascada utiza (origen, especificidad, orden de aparicion)
+
+para heredar una propiedad del padre, usar propiedad:inherit
+
+UI desing Daily hay plantillas especificamente para copiar
+
+flexBox
+    flex-direction = direccion (columna o fila)
+    flex-wrap = ajustar en una linea o que se desplazen a una segunda linea (wrap: varias filas) 
+    (nowrap:se ajustan a una fila)
+    aling-content = alinear elementos verticalmente cuando tenemos flex-wrap:wrap;
+    order = se aplica a los hijos de un flex content, posiciona elementos como querramos order:0 /HIJOS
+    flex-grow = hacer que un elemento ocupe mas espacio respecto al resto, hace que el resto se 
+    comprima si es el caso / HIJOS
+    flex-shrink = la cantidad de tamaño que se encogera respecto al resto, entre mas alto el valor
+    mas se encogera / HIJOS
+    flex-basis = trata de cumplir el tamaño especificado sin salirse del contenedor flex y sin sobre
+    ponerse a otros elementos / HIJOS
+    aling-self = se usa para elementos hijos de flex-box
+
+> para elementos hijos
+
+~ para elementos hermanos
+
+Uigradients para degradados cool
+
+para un efecto de ola 
+https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections
+
+para alerts bonitos
+sweetAlert
+
+
+
+//JS
+
+
+//ANGULAR
+
+para crear un proyecto angular, ng new nombre archivo
+
+para instalar un paquete, npm install nombre paquete
+en angular.json, dirigirse a la parte de scripts o styles, y añadir la direccion de los archivos de
+los paquetes instalados
+
+para ejecutar la pagina, poner ng serve
+
+para cargar scripts en angular 
+    ng g s NombreServicio
+
+    en el servicio 
+    Carga(archivos: string[]){
+    for (let archivo of archivos) {
+      let script = document.createElement('script');
+      script.src = "./assets/js/" + archivo + ".js";
+
+      let body = document.getElementsByTagName('body')[0];
+      body.appendChild(script);
+    }
+    }
+
+    en app.module
+    import { CargarScriptsService } from './services/cargar-scripts.service';
+    exportar en providers
+
+    en app.comonent
+    import { CargarScriptsService } from './services/cargar-scripts.service';
+    constructor(private _CargarScriptsService:CargarScriptsService){
+    _CargarScriptsService.Carga(['app']);
+  }
+
