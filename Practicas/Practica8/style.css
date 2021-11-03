@@ -1,0 +1,91 @@
+/* IMB PLEX SANS AND MERRYWEATHER*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Merriweather&display=swap');
+
+body,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+body{
+    background-color: #19223e;
+}
+.cs-cont{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+}
+.c-cont{
+    flex-basis: 250px;
+    background-color: #212c4d;
+    border-radius: 10px;
+    height: 380px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background .4s;
+}
+.c-cont.active{
+    background-color: #7a3af4;
+}
+.c-cont.c-cont.active .btn-purchase{
+    background-color: #7a3af4;
+}
+.cont{
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: 10px;
+    background-color: #19223e;
+    text-align: center;
+    color: #fff;
+    font-family: 'IBM Plex Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.cnt__header{
+    border-bottom: 2px solid #212c4d;
+    padding-bottom: 20px;
+}
+.cnt__header *{
+    margin: 10px;
+}
+.cnt__header h2{
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+}
+.cnt__header p{
+    font-size: .8rem;
+}
+.btn-purchase{
+    padding: 10px 30px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #19223e;
+    color: #fff;
+    border: 1px solid #7a3af4;
+    transition: background .4s;
+    cursor: pointer;
+}
+.btn-purchase:hover{
+    background-color: #212c4d;
+}
+.chrct__ul{
+    list-style: none;
+    padding: 0;
+}
+.ul__li{
+    margin: 12px 0;
+    font-size: .8rem;
+}
+.ul__li::before{
+    content: "✓";
+    margin-right: 9px;
+}

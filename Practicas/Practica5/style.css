@@ -1,0 +1,50 @@
+*{
+    font-family: 'Noto Sans Display', sans-serif;
+}
+body{
+    background-color: #efefef;
+}
+main{
+    width: 500px;
+    margin: 0 auto;
+}
+header h3{
+    color: #1d0c80;
+    font-size: 20px;
+}
+p{
+    font-size: 13px;
+    line-height: 2;
+}
+nav{
+    text-align: center;
+}
+#btns-reds{
+    display: flex;
+    justify-content: space-between;
+}
+#btns-reds i{
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .5s;
+}
+#btns-reds i:hover{
+    background-color: #ddd;
+}
+nav a{
+    text-decoration: none;
+    background: linear-gradient(#F1C40F 0% ,#F39C12 100%);
+    outline: 1px solid #D68910;
+    letter-spacing: 1px;
+    color: #000;
+    border-radius: 2px;
+    padding: 8px 0;
+    display: block;
+    margin: 15px 0;
+    transition: background .4s;
+}
+nav a:hover{
+    background-color: #D68910;
+}

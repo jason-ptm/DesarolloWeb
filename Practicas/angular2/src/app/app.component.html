@@ -1,0 +1,59 @@
+<section class="nav-bar">
+  <h2 class="nav-title">Angular CRUD</h2>
+</section>
+<section class="contenedor-flex">
+  <section class="empleado-lista contenedor">
+    <h3 class="title">Lista Empleados</h3>
+    <ul class="list-group">
+      <li class="list-item" *ngFor="let user of arrayUsers" (click)="selectDeselectUser(user)">
+        <p class="resalt">{{user.id}}</p>
+        {{user.name}}{{user.lastName}} - {{user.age}} años
+      </li>
+    </ul>
+  </section>
+  
+  <div class="contenedor user-add">
+    <h3 class="title">Añadir empleado</h3>
+    <div class="add-form">
+
+      <div class="input-contenedor">
+        <div class="input">
+          <label for="inp-nombre">Nombre</label>
+          <input type="text" spellcheck="false" autocomplete="off" id="inp-nombre" class="input-add-user" [(ngModel)]="userSelected.name" 
+          #nombreInp 
+          (focus)="desplegarBarras(0,nombreInp.value,false)" 
+          (blur)="desplegarBarras(0,nombreInp.value,false)">
+        </div>
+        <span class="bar-input" [ngClass]="{'active':arrayBarrasSpan[0], ' ':!arrayBarrasSpan[0]}"></span>
+      </div>
+
+      <div class="input-contenedor">
+        <div class="input">
+          <label for="inp-apellido">Apellido</label>
+          <input type="text" spellcheck="false" autocomplete="off" id="inp-apellido" class="input-add-user" [(ngModel)]="userSelected.lastName" 
+          #apellidoInp 
+          (focus)="desplegarBarras(1,apellidoInp.value,false)" 
+          (blur)="desplegarBarras(1,apellidoInp.value,false)"
+          >
+        </div>
+        <span class="bar-input" [ngClass]="{'active':arrayBarrasSpan[1], ' ':!arrayBarrasSpan[1]}"></span>
+      </div>
+
+      <div class="input-contenedor">
+        <div class="input">
+          <label for="inp-edad">Edad</label>
+          <input type="number" spellcheck="false" autocomplete="off" id="inp-edad" class="input-add-user" [(ngModel)]="userSelected.age" 
+          #edadInp 
+          (focus)="desplegarBarras(2,edadInp.value,false)" 
+          (blur)="desplegarBarras(2,edadInp.value,false)">
+        </div>
+        <span class="bar-input" [ngClass]="{'active':arrayBarrasSpan[2], ' ':!arrayBarrasSpan[2]}"></span>
+      </div>
+
+      <div class="btns-contenedor">
+        <button class="form-btn" (click)="addUser()">Agregar</button>
+        <button class="form-btn" (click)="deleteUser()">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</section>

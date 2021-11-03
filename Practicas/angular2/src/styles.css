@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body,html{
+    height: 100%;
+}
+body{
+    background: #8E2DE2;  
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); 
+}
+.nav-bar{
+    height: 40px;
+    padding: 20px;
+    background-color: #000b;
+    color: #fff;
+}
+.contenedor-flex{
+    height: calc(100% - 160px);
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.contenedor{
+    height: 429px;
+    padding: 18px;
+    border-radius: 3px;
+    background-color: #000b;
+    color: #fff;
+    box-shadow: 0 0 6px 0 #000;
+}
+
+/* //LISTA EMPLEADOS */
+
+.empleado-lista{
+    
+    flex-basis: 45%;
+}
+.user-add{
+    flex-basis: 30%;
+}
+.title{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #444;
+}
+.list-group{
+    width: 100%;
+    height: 390px;
+    margin-top: 10px;
+    overflow-y: scroll;
+    list-style: none;
+    background-color: #0006;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list-group::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 3px;
+}
+.list-group::-webkit-scrollbar-thumb{
+    background-color: #0008;
+    border-radius: 5px;
+}
+.list-group::-webkit-scrollbar-track{
+    border-radius:5px;
+    background-color:#fffb;
+}
+.list-item{ 
+    user-select: none;
+    width: calc(98% - 24px);
+    padding: 10px 12px;
+    border-bottom: 1px solid #bbb;
+    cursor: pointer;
+    transition: all .4s;
+}
+.list-item:hover{
+    transform: scaleX(1.02);
+    background-color: #fff4;
+}
+.list-item.select{
+    transform: scaleX(1.02);
+    background: #8E2DE2;  
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); 
+}
+.resalt{
+    display:inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 2px;
+    margin-right: 10px;
+    background-color: #8E2DE2;
+}
+
+
+/* //FORMULARIO */
+
+.add-form{
+    height: calc(100% - 36px - 29px - 20px);
+    width: calc(90% - 36px);
+    margin: 10px auto;
+}
+.input-contenedor{
+    margin: 0 auto;
+    max-width: 350px;
+    width: 100%;
+    margin-top: 10px;
+}
+.input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.input input{
+    width: calc(100% - 24px);
+    padding: 8px 12px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #fffb;
+    margin-top: 2px;
+    transition: all .4s;
+}
+.input input:hover, .form-btn:hover{
+    background-color: #fffd;
+}
+.bar-input{
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #8E2DE2;
+    transition: width .4s;
+}
+.bar-input.active{
+    width: 100%;
+}
+.btns-contenedor{
+    height: calc(100% - 224px);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.form-btn{
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background-color: #fffb;
+    height: 50px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+@media screen and (max-width:850px) {
+    .contenedor-flex{
+        min-width:330px;
+        width:80%;
+        height: auto;
+        margin:0 auto;
+        gap:20px;
+        flex-direction: column;
+    }
+}

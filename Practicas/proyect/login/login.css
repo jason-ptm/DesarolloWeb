@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body, html{
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+body{
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+main{
+    height: 100%;
+    width: 100%;
+}
+.login-contenedor{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    flex-basis: 80%;
+    padding: 40px 0;
+    border-radius: 12px;
+    color: #fff;
+    background-color: #fff6;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.input-contenedor{
+    background-color:#0009;
+    width: 70%;
+    max-width: 300px;
+    height: 40px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    transition: background .4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-contenedor:first-child{
+    margin: 20px 0;
+}
+.input-contenedor:hover{
+    background-color: #000b;
+    cursor: pointer;
+}
+
+.input-contenedor.error {
+    background-color: #CB433566;
+}
+.inp{
+    width: 100%;
+    height: calc(100% - 2px);
+    display: flex;
+    align-items: center;
+}
+.inp label{
+    color: #fffa;
+    font-size: 26px;
+    margin: 0 12px;
+}
+.inp input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fffa;
+}
+.inp input::placeholder{
+    color: #fff6;
+}
+.inp-bar{
+    height: 2px;
+    width: 0;
+    background-color: #ddd;
+    transition: width .4s;
+}
+.inp-bar.inp-active{
+    width: 100%;
+}
+.forget-text{
+    max-width: 300px;
+    margin-top: 5px;
+    text-align: right;
+    width: 70%;
+}
+.forget-text a{
+    text-decoration: none;
+    color: #555;
+    font-size: .9rem;
+    font-style: italic;
+}
+.forget-text a:hover{
+    color: #333;
+}
+.btn-inp{
+    margin-top: 15px;
+    width: 35%;
+    max-width: 150px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: #fffa;
+    cursor: pointer;
+    border-radius: 3px;
+    color: #444;
+    transition: background .4s;
+}
+.btn-inp:hover{
+    background-color: rgba(230, 215, 215, 0.8);
+}
+
+@media screen and (min-width:750px){
+    .login-contenedor{
+        background-color: #ddd;
+        width: 40%;
+        box-shadow: 0px 0px 20px 0px #000000;
+    }
+    .login{
+        background-color: #000a;
+    }
+    .forget-text a{
+        color: #ddd;
+    }
+    .forget-text a:hover{
+        color: #bbb;
+    }
+}

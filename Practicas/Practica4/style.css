@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+}
+main{
+    background-color: rgb(255, 255, 224);
+    padding: 20px;
+}
+h1{
+    color: grey;
+}
+h3{
+    color: lightgray;
+}
+li{
+    font-size: 19px;
+}
+.negrita{
+    font-weight: bold;
+}

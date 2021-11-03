@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/241f75dc79.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <main>
+        <section class="login-contenedor">
+            <form class="login">
+                <div class="input-contenedor">
+                    <div class="inp">
+                        <label for="user-inp" class="fas fa-user"></label>
+                        <input type="text" placeholder="Usuario" id="user-inp" class="input" spellcheck="false" required>  
+                    </div>
+                    <span class="inp-bar"></span>
+                </div>
+                <div class="input-contenedor">
+                    <div class="inp">
+                        <label for="password-inp" class="fas fa-key"></label>
+                        <input type="text" placeholder="Contraseña" id="password-inp" class="input" spellcheck="false" required>
+                    </div>
+                    <span class="inp-bar"></span>
+                </div>
+                <p class="forget-text"><a href="#">¿Olvidaste tu contraseña?</a></p>
+                <input type="button" value="Iniciar sesión" class="btn-inp">
+            </form>
+        </section>
+    </main>
+    <script src="login.js"></script>
+</body>
+</html>
