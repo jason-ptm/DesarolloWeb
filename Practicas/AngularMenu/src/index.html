@@ -9,117 +9,84 @@
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <!-- <app-root></app-root> -->
-  <!-- <nav class="nav-bar">
-    <ul class="nav-head cont-items">
-      <li class="nav-title nav-item menu">
-        <h2 class="item-con">Menu</h2>
-        <span class="item-icon">
-          <i class="menu-icon"></i>
-        </span>
+  <nav class="side-bar">
+    <ul>
+      <li class="bar-item">
+        <a href="#" class="item-close" style="pointer-events:none">
+          <i class='bx bxl-c-plus-plus item-icon'></i>
+          <h2>CodinLab</h2>
+        </a>
+        <i class="bx bx-menu-alt-right item-icon" id="menu-btn"></i>
+        <span class="item-dash">Menú</span>
       </li>
-      <li class="nav-item">
-        <span class="item-icon">
-          <i class="fas fa-user"></i>
-        </span>
-        <div class="inp-cont item-con">
-          <label for="search-inp" class="inp-label">Buscar</label>
-          <input type="text" class="inp" id="search-inp">
-        </div>
-        <span class="item-text">Buscar</span>
-      </li>
-    </ul>
-    <ul class="cont-items">
-      <li class="nav-item">
-        <span class="item-icon"><i class="fas fa-user"></i></span>
-        <p class="item-con">Opcion</p>
-        <span class="item-text">Opcion</span>
-      </li>
-    </ul>
-  </nav> -->
-
-  <nav class="side-bar-cont">
-    <ul class="side-bar">
-      <li class="bar-head bar-item">
-        <div class="nav-con">
-          <a href="#">
-            <i class='bx bxl-c-plus-plus icon item-icon'></i>
-            <span class="head-tittle">
-              CodingLab
-            </span>
-          </a>
-        </div>
-        <div class="item-icon">
-          <span class="menu-icon"></span>
-        </div>
-      </li>
-      <li class="bar-item bar-inp">
+      <li class="bar-item">
         <a href="#">
           <label class="bx bx-search item-icon" for="search-inp"></label>
-          <input type="text" placeholder="Search..." id="search-inp">
+          <input type="text" id="search-inp" class="item-close">
         </a>
-        <span class="text-dash">Search</span>
+        <span class="item-dash">Search</span>
       </li>
       <li class="bar-item">
         <a href="#">
           <i class='bx bx-grid-alt item-icon'></i>
-          <span class="item-text">Dashboard</span>
+          <span class="item-close">Dashboard</span>
         </a>
-        <span class="text-dash">Dashboard</span>
+        <span class="item-dash">Dashboard</span>
       </li>
       <li class="bar-item">
         <a href="#">
-          <i class='bx bx-user item-icon' ></i>
-          <span class="item-text">User</span>
+          <i class='bx bx-user item-icon'></i>
+          <span class="item-close">User</span>
         </a>
-        <span class="text-dash">User</span>
+        <span class="item-dash">User</span>
       </li>
       <li class="bar-item">
         <a href="#">
-          <i class='bx bx-chat item-icon' ></i>
-          <span class="item-text">Messages</span>
+          <i class='bx bx-chat item-icon'></i>
+          <span class="item-close">Messages</span>
         </a>
-        <span class="text-dash">Messages</span>
+        <span class="item-dash">Messages</span>
       </li>
       <li class="bar-item">
         <a href="#">
-          <i class='bx bx-pie-chart-alt-2 item-icon' ></i>
-          <span class="item-text">Analytics</span>
+          <i class='bx bx-pie-chart-alt-2 item-icon'></i>
+          <span class="item-close">Analytics</span>
         </a>
-        <span class="text-dash">Analytics</span>
+        <span class="item-dash">Analytics</span>
       </li>
       <li class="bar-item">
         <a href="#">
-          <i class='bx bx-folder item-icon' ></i>
-          <span class="item-text">File Manager</span>
+          <i class='bx bx-folder item-icon'></i>
+          <span class="item-close">File Manager</span>
         </a>
-        <span class="text-dash">File Manager</span>
+        <span class="item-dash">File Manager</span>
       </li>
       <li class="bar-item">
         <a href="#">
-          <i class='bx bx-cart-alt item-icon' ></i>
-          <span class="item-text">Order</span>
+          <i class='bx bx-cart-alt item-icon'></i>
+          <span class="item-close">Order</span>
         </a>
-        <span class="text-dash">Order</span>
+        <span class="item-dash">Order</span>
       </li>
       <li class="bar-item">
         <a href="#">
           <i class='bx bx-heart item-icon' ></i>
-          <span class="item-text">Saved</span>
+          <span class="item-close">Saved</span>
         </a>
-        <span class="text-dash">Saved</span>
+        <span class="item-dash">Saved</span>
+      </li>
+      <li class="bar-item bar-footer">
+        <div class="item-close footer-info">
+          <img src="./assets/img/profile.jpg" class="user-img" alt="profileImg">
+          <div class="info-text">
+            <p>Prem Shabi</p>
+            <p>Web designer</p>
+          </div>
+        </div>
+        <i class='bx bx-log-out item-icon'></i>
+        <span class="item-dash">Log out</span>
       </li>
     </ul>
-    <div class="bar-exit">
-      <div class="user-info">
-        <!-- <img src="./assets/img/profile.jpg" class="user-img" alt="profileImg"> -->
-        <div class="user-text">
-          <p class="user-name">Prem Shabi</p>
-          <p class="user-charge">Web designer</p>
-        </div>
-      </div>
-      <i class='bx bx-log-out item-icon' id="log_out" ></i>
-    </div>
   </nav>
   <script src="./assets/js/index.js"></script>
 </body>

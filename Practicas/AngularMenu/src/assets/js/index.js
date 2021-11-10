@@ -1,3 +1,5 @@
-document.querySelector('.menu-icon').addEventListener('click',()=>{
-    document.querySelector('.side-bar-cont').classList.toggle('active');
+document.getElementById('menu-btn').addEventListener('click',()=>{
+    document.getElementById('menu-btn').classList.toggle('bx-menu');
+    document.getElementById('menu-btn').classList.toggle('bx-menu-alt-right');
+    document.querySelector('.side-bar').classList.toggle('active');
 });
