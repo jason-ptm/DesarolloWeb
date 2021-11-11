@@ -1,0 +1,84 @@
+<main class="main-cont">
+  <nav class="side-bar">
+    <ul>
+      <li class="bar-item">
+        <a href="#" class="item-close" style="pointer-events:none">
+          <i class='bx bxl-c-plus-plus item-icon'></i>
+          <h2>CodinLab</h2>
+        </a>
+        <i class="bx bx-menu-alt-right item-icon" id="menu-btn"></i>
+        <span class="item-dash">Menú</span>
+      </li>
+      <li class="bar-item">
+        <a href="#">
+          <label class="bx bx-search item-icon" for="search-inp"></label>
+          <input type="text" id="search-inp" class="item-close" placeholder="Buscar...">
+        </a>
+        <span class="item-dash">Search</span>
+      </li>
+      <li class="bar-item">
+        <a routerLink="/dashboard">
+          <i class='bx bx-grid-alt item-icon'></i>
+          <span class="item-close">Dashboard</span>
+        </a>
+        <span class="item-dash">Dashboard</span>
+      </li>
+      <li class="bar-item">
+        <a routerLink="/user">
+          <i class='bx bx-user item-icon'></i>
+          <span class="item-close">User</span>
+        </a>
+        <span class="item-dash">User</span>
+      </li>
+      <li class="bar-item">
+        <a href="#">
+          <i class='bx bx-chat item-icon'></i>
+          <span class="item-close">Messages</span>
+        </a>
+        <span class="item-dash">Messages</span>
+      </li>
+      <li class="bar-item">
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2 item-icon'></i>
+          <span class="item-close">Analytics</span>
+        </a>
+        <span class="item-dash">Analytics</span>
+      </li>
+      <li class="bar-item">
+        <a href="#">
+          <i class='bx bx-folder item-icon'></i>
+          <span class="item-close">File Manager</span>
+        </a>
+        <span class="item-dash">File Manager</span>
+      </li>
+      <li class="bar-item">
+        <a href="#">
+          <i class='bx bx-cart-alt item-icon'></i>
+          <span class="item-close">Order</span>
+        </a>
+        <span class="item-dash">Order</span>
+      </li>
+      <li class="bar-item">
+        <a href="#">
+          <i class='bx bx-heart item-icon' ></i>
+          <span class="item-close">Saved</span>
+        </a>
+        <span class="item-dash">Saved</span>
+      </li>
+      <li class="bar-item bar-footer">
+        <div class="item-close footer-info">
+          <img src="./assets/img/profile.jpg" class="user-img" alt="profileImg">
+          <div class="info-text">
+            <p>Prem Shabi</p>
+            <p>Web designer</p>
+          </div>
+        </div>
+        <i class='bx bx-log-out item-icon'></i>
+        <span class="item-dash">Log out</span>
+      </li>
+    </ul>
+  </nav>
+  <div class="item-view">
+    <router-outlet></router-outlet>
+  </div>
+</main>
